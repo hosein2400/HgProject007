@@ -18,7 +18,7 @@ public class HgProject007 {
      */
     public static void main(String[] args) {
         //System.out.println(""+tabdil.digit02(5));
-       
+      
         
         String result = "";
         
@@ -41,8 +41,10 @@ public class HgProject007 {
             break;
           case 3: result = tabdil.digit03(a);
             break;
+          case 4: result = tabdil.digit04(a);
+          break;
       }
         System.out.println("" + result);  
-   
+        
    }
 }

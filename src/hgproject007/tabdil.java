@@ -109,8 +109,11 @@ public class tabdil {
         result = result2 + " و "+ result1;
     }   
             }
+    if (result.equals("صفر") ){
+    return "";
+    }else{        
     return result;
-        
+    }    
         
     }
     public static String digit03(long x){
@@ -154,6 +157,25 @@ public class tabdil {
     }
     
     
+    return result;
+    }
+    public static String digit04(long x){
+    String result = null;
+    String result1 = null;
+    String result2 = null;
+    result = String.valueOf(x);
+    result2 = result.substring(0,1);
+    result1 = result.substring(1,4); // right side sort
+    Long a2 = Long.parseLong(result2);
+    Long a1 = Long.parseLong(result1);
+    
+    result2 = digit01(a2) + " هزار ";
+    if (a1 == 0){
+    result = result2;
+    }else{
+    result1 = digit03(a1);
+    result = result2 +" و "+ result1;
+    }
     return result;
     }
 }
