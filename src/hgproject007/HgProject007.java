@@ -45,6 +45,8 @@ public class HgProject007 {
           break;
           case 5: result = tabdil.digit05(a);
           break;
+          case 6: result = tabdil.digit06(a);
+          break;
       }
         System.out.println("" + result);  
         
