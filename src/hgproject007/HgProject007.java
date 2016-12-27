@@ -17,38 +17,13 @@ public class HgProject007 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        //System.out.println(""+tabdil.digit02(5));
-      
+        Scanner input = new Scanner(System.in);
+        System.out.print("please enter a number:");
+        long in = input.nextLong();
         
-        String result = "";
+        System.out.println("" + tabdil.tTabdil(in));
         
-        long a ;
-        int numSize;
-      Scanner input = new Scanner(System.in);
-        System.out.println("please enter a number:" );
-      try{
-      a = input.nextLong();
-      
-      }catch(Exception e){
-          System.err.println("please enter a valid number");
-          a = 0;
-      }
-      numSize = tabdil.numSize(a);
-      switch(numSize){
-          case 1: result = tabdil.digit01(a);
-            break;
-          case 2: result = tabdil.digit02(a);
-            break;
-          case 3: result = tabdil.digit03(a);
-            break;
-          case 4: result = tabdil.digit04(a);
-          break;
-          case 5: result = tabdil.digit05(a);
-          break;
-          case 6: result = tabdil.digit06(a);
-          break;
-      }
-        System.out.println("" + result);  
+       
         
    }
 }

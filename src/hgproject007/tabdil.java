@@ -164,16 +164,16 @@ public class tabdil {
     String result1 = null;
     String result2 = null;
     result = String.valueOf(x);
-    result2 = result.substring(0,1);
-    result1 = result.substring(1,4); // right side sort
-    Long a2 = Long.parseLong(result2);
-    Long a1 = Long.parseLong(result1);
+    result2 = result.substring(0,1); // if x = 1001 then result2 = 1
+    result1 = result.substring(1,4); // right side sort -- and result1 = 001
+    Long a2 = Long.parseLong(result2); // a2 = 1
+    Long a1 = Long.parseLong(result1); // a1 = ?
     
     result2 = digit01(a2) + " هزار ";
     if (a1 == 0){
     result = result2;
     }else{
-    result1 = digit03(a1);
+    result1 = tTabdil(a1);
     result = result2 +" و "+ result1;
     }
     return result;
@@ -192,7 +192,7 @@ public class tabdil {
     if (a1 == 0){
     result = result2;
     }else{
-    result1 = digit03(a1);
+    result1 = tTabdil(a1);
     result = result2 +" و "+ result1;
     }
     return result;
@@ -211,9 +211,28 @@ public class tabdil {
     if (a1 == 0){
     result = result2;
     }else{
-    result1 = digit03(a1);
+    result1 = tTabdil(a1);
     result = result2 +" و "+ result1;
     }
     return result;
+    }
+    public static String tTabdil(long x){
+        String result = "";
+        int numSize = tabdil.numSize(x);
+      switch(numSize){
+          case 1: result = tabdil.digit01(x);
+            break;
+          case 2: result = tabdil.digit02(x);
+            break;
+          case 3: result = tabdil.digit03(x);
+            break;
+          case 4: result = tabdil.digit04(x);
+            break;
+          case 5: result = tabdil.digit05(x);
+            break;
+          case 6: result = tabdil.digit06(x);
+            break;
+      }
+        return result;
     }
 }
