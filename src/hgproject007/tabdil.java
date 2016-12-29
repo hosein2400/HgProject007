@@ -216,6 +216,128 @@ public class tabdil {
     }
     return result;
     }
+    
+    public static String digit07(long x){
+    String result = null;
+    String result1 = null;
+    String result2 = null;
+    result = String.valueOf(x);
+    result2 = result.substring(0,1);
+    result1 = result.substring(1,7); // right side sort
+    Long a2 = Long.parseLong(result2);
+    Long a1 = Long.parseLong(result1);
+    
+    result2 = digit01(a2) + " میلیون ";
+    if (a1 == 0){
+    result = result2;
+    }else{
+    result1 = tTabdil(a1);
+    result = result2 +" و "+ result1;
+    }
+    return result;
+    }
+    
+    public static String digit08(long x){
+    String result = null;
+    String result1 = null;
+    String result2 = null;
+    result = String.valueOf(x);
+    result2 = result.substring(0,2);
+    result1 = result.substring(2,8); // right side sort
+    Long a2 = Long.parseLong(result2);
+    Long a1 = Long.parseLong(result1);
+    
+    result2 = digit02(a2) + " میلیون ";
+    if (a1 == 0){
+    result = result2;
+    }else{
+    result1 = tTabdil(a1);
+    result = result2 +" و "+ result1;
+    }
+    return result;
+    }
+    
+    public static String digit09(long x){
+    String result = null;
+    String result1 = null;
+    String result2 = null;
+    result = String.valueOf(x);
+    result2 = result.substring(0,3);
+    result1 = result.substring(3,9); // right side sort
+    Long a2 = Long.parseLong(result2);
+    Long a1 = Long.parseLong(result1);
+    
+    result2 = digit03(a2) + " میلیون ";
+    if (a1 == 0){
+    result = result2;
+    }else{
+    result1 = tTabdil(a1);
+    result = result2 +" و "+ result1;
+    }
+    return result;
+    }
+    
+    public static String digit10(long x){
+    String result = null;
+    String result1 = null;
+    String result2 = null;
+    result = String.valueOf(x);
+    result2 = result.substring(0,1);
+    result1 = result.substring(1,10); // right side sort
+    Long a2 = Long.parseLong(result2);
+    Long a1 = Long.parseLong(result1);
+    
+    result2 = digit01(a2) + " میلیارد ";
+    if (a1 == 0){
+    result = result2;
+    }else{
+    result1 = tTabdil(a1);
+    result = result2 +" و "+ result1;
+    }
+    return result;
+    }
+    
+    public static String digit11(long x){
+    String result = null;
+    String result1 = null;
+    String result2 = null;
+    result = String.valueOf(x);
+    result2 = result.substring(0,2);
+    result1 = result.substring(2,11); // right side sort
+    Long a2 = Long.parseLong(result2);
+    Long a1 = Long.parseLong(result1);
+    
+    result2 = digit02(a2) + " میلیارد ";
+    if (a1 == 0){
+    result = result2;
+    }else{
+    result1 = tTabdil(a1);
+    result = result2 +" و "+ result1;
+    }
+    return result;
+    }
+    
+    public static String digit12(long x){
+    String result = null;
+    String result1 = null;
+    String result2 = null;
+    result = String.valueOf(x);
+    result2 = result.substring(0,3);
+    result1 = result.substring(3,12); // right side sort
+    Long a2 = Long.parseLong(result2);
+    Long a1 = Long.parseLong(result1);
+    
+    result2 = digit03(a2) + " میلیارد ";
+    if (a1 == 0){
+    result = result2;
+    }else{
+    result1 = tTabdil(a1);
+    result = result2 +" و "+ result1;
+    }
+    return result;
+    }
+    
+    
     public static String tTabdil(long x){
         String result = "";
         int numSize = tabdil.numSize(x);
@@ -232,6 +354,18 @@ public class tabdil {
             break;
           case 6: result = tabdil.digit06(x);
             break;
+          case 7: result = tabdil.digit07(x);
+              break;
+          case 8: result = tabdil.digit08(x);
+          break;
+          case 9: result = tabdil.digit09(x);
+          break;
+          case 10: result = tabdil.digit10(x);
+          break;
+          case 11: result = tabdil.digit11(x);
+          break;
+          case 12: result = tabdil.digit12(x);
+          break;
       }
         return result;
     }
