@@ -23,7 +23,7 @@ public class HgProject007 {
         
         System.out.println("" + tabdil.tTabdil(in));
         
-       
         
+       
    }
 }
