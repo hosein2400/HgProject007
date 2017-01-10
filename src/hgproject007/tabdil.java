@@ -75,9 +75,7 @@ public class tabdil {
     }
     
     public static String digit02(long x){
-        String result = null; //for final return
-        String result1 = null; //for first digit
-        String result2 = null; // for second digit
+        String result = "" ,result1 ,result2 ; //for final return //for first digit // for second digit
         int test = 0 ;
             if(x<10){result = digit01(x);}
             if(x<20){
@@ -146,9 +144,7 @@ public class tabdil {
         
     }
     public static String digit03(long x){
-    String result = null;
-    String result1 = null;
-    String result2 = null;
+    String result , result1 ,result2;
     result = String.valueOf(x);
     result2 = result.substring(0,1);
     result1 = result.substring(1,3); // right side sort
@@ -199,35 +195,30 @@ public class tabdil {
             break;
           case 3: result = tabdil.digit03(x);
             break;
-          case 4: result = helper(x, " هزار ");
+          case 4 : 
+          case 5: 
+          case 6: 
+              result = helper(x, " هزار ");
             break;
-          case 5: result = helper(x, " هزار ");
+          case 7: 
+          case 8: 
+          case 9: 
+              result = helper(x, " میلیون ");
             break;
-          case 6: result = helper(x, " هزار ");
+          case 10: 
+          case 11: 
+          case 12: 
+              result = helper(x, " میلیارد ");
             break;
-          case 7: result = helper(x, " میلیون ");
+          case 13: 
+          case 14: 
+          case 15: 
+              result = helper(x, " بیلیون ");
             break;
-          case 8: result = helper(x, " میلیون ");
-            break;
-          case 9: result = helper(x, " میلیون ");
-            break;
-          case 10: result = helper(x, " میلیارد ");
-            break;
-          case 11: result = helper(x, " میلیارد ");
-            break;
-          case 12: result = helper(x, " میلیارد ");
-            break;
-          case 13: result = helper(x, " بیلیون ");
-            break;
-          case 14: result = helper(x, " بیلیون ");
-            break;
-          case 15: result = helper(x, " بیلیون ");
-            break;
-          case 16: result = helper(x, " بیلیارد ");
-            break;
-          case 17: result = helper(x, " بیلیارد ");
-            break;
-          case 18: result = helper(x, " بیلیارد ");
+          case 16: 
+          case 17: 
+          case 18: 
+              result = helper(x, " بیلیارد ");
             break;
       }
         return result;
